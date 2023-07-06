@@ -21,7 +21,8 @@ import (
 	"buster-client/utils"
 )
 
-const initResponse = `<!DOCTYPE html>
+const initResponse = `
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
