@@ -20,11 +20,11 @@ jobs:
           path-type: inherit
           update: true
       - name: Install dependencies
-        run: msys2 pacman --noconfirm -S --needed git base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake
+        run: pacman --noconfirm -S --needed git base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake
       - name: Build artifacts
         env:
           PATH: ''
-        run: msys2 make GOOS=windows GOARCH=amd64 setup
+        run: make GOOS=windows GOARCH=amd64 setup
       - name: Hash artifacts
         run: sha256sum dist/*
         if: startsWith(github.ref, 'refs/tags/v')
@@ -51,11 +51,11 @@ jobs:
           path-type: inherit
           update: true
       - name: Install dependencies
-        run: msys2 pacman --noconfirm -S --needed git base-devel mingw-w64-i686-toolchain mingw-w64-i686-cmake
+        run: pacman --noconfirm -S --needed git base-devel mingw-w64-i686-toolchain mingw-w64-i686-cmake
       - name: Build artifacts
         env:
           PATH: ''
-        run: msys2 make GOOS=windows GOARCH=386 setup
+        run: make GOOS=windows GOARCH=386 setup
       - name: Hash artifacts
         run: sha256sum dist/*
         if: startsWith(github.ref, 'refs/tags/v')
