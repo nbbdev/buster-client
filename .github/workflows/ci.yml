@@ -18,7 +18,7 @@ jobs:
         with:
           msystem: MINGW64
           path-type: inherit
-          update: false
+          update: true
       - name: Install dependencies
         run: msys2do pacman --noconfirm -S --needed git base-devel mingw-w64-x86_64-toolchain mingw-w64-x86_64-cmake
       - name: Build artifacts
