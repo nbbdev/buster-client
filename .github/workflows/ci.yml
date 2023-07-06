@@ -14,7 +14,7 @@ jobs:
         with:
           go-version: '1.13.7'
       - name: Setup MSYS
-        uses: numworks/setup-msys2@v1
+        uses: msys2/setup-msys2@v2
         with:
           msystem: MINGW64
           path-type: inherit
@@ -45,7 +45,7 @@ jobs:
         with:
           go-version: '1.13.7'
       - name: Setup MSYS
-        uses: numworks/setup-msys2@v1
+        uses: msys2/setup-msys2@v2
         with:
           msystem: MINGW32
           path-type: inherit
